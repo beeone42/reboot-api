@@ -1,0 +1,8 @@
+{
+    "path":"/root/reboot-api/",
+    "cmd":"/root/reboot-api/reboot.sh",
+    "key":"change-me",
+    "host":"0.0.0.0",
+    "port":"8080",
+    "debug":"True"
+}
