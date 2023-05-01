@@ -24,8 +24,8 @@ def hello():
 def load():
     return "%s, %s, %s" % os.getloadavg()
 
-@route('/<key>/reboot')
-def pull(key):
+@post('/<key>/reboot')
+def reboot(key):
     if (key != config["key"]):
         return "ko"
     postdata = request.json
@@ -37,7 +37,7 @@ def pull(key):
     return "ok"
 
 @post('/<key>/test')
-def pull(key):
+def test(key):
     if (key != config["key"]):
         return "ko"
     postdata = request.json
