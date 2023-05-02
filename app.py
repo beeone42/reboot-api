@@ -39,7 +39,7 @@ def load():
 
 @post('/<key>/reboot')
 @check_key
-def reboot():
+def reboot(key):
     postdata = request.json
     status = postdata['heartbeat']['status']
     print("STATUS: %s" % status)
@@ -51,7 +51,7 @@ def reboot():
 
 @post('/<key>/test')
 @check_key
-def test():
+def test(key):
     postdata = request.json
     status = postdata['heartbeat']['status']
     print("STATUS: %s" % status)
